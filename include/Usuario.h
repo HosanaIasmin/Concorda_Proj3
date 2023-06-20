@@ -25,15 +25,19 @@ public:
     //Destutor da classe
     ~Usuario();
 
-    /// @brief Métodos get e set para o atributo título
+    
     int getID();
-    void setID()
-    string get();
-    void setTitulo(string titulo);
+    void setID(int id);
 
-    /// @brief Métodos get e set para o atributo título
-    string getArtista();
-    void setArtista(string artista);
+    string getNome();
+    void setNome(string nome);
+
+ 
+    string getEmail();
+    void setEmail(string email);
+
+    string getSenha();
+    void setSenha(string senha);
 };
 
 #endif
