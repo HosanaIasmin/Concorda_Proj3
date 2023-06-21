@@ -13,9 +13,9 @@ class Usuario
 private:
 
     int id;
-    std::string nome;
-    std::string email;
-    std::string senha;
+    string nome;
+    string email;
+    string senha;
 
 public:
 
