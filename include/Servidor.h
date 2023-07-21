@@ -2,34 +2,43 @@
 #define SERVIDOR_H
 
 #include <iostream>
-#include <string>
 #include <vector>
 #include "Canal.h"
 
-using namespace std;
 
 class Servidor {
     private:
-        int usuarioDonoId;
-        string nome;
-        string descricao;
-        string codigoConvite;
-        std::vector<Canal *> canais;
-        std::vector<int> participantesIDs;
+        int usuarioDonoID;
+        std::string nome;
+        std::string descricao;
+        std::string codigoConvite;
+        std::vector <Canal*> canais;
+        std::vector <int> participantesIDs;
 
     public:
-        Servidor(int usarioDonoId, string nome, string descricao);
-        int getUsuarioDonoId();
+        Servidor(int usuarioDonoID, string nome, string descricao);
+        ~Servidor();
+
+        int getUsuarioDonoID();
+        void setUsuarioDonoID(int usuarioDonoID);
+
         string getNome();
+        void setNome(string nome);
+
+        string getDescricao();
+        void setDescricao(string descricao);
+        
         string getCodigoConvite();
-        std::vector<Canal *> getCanais();
-        std::vector<int> getParticipantesIDs();
-
-        int setUsuarioDonoId();
-        string setNome();
         string gerarNovoCodigoConvite();
-        void addCanal(const Canal &canal);
-        void addParticipante(int participanteId);
+        
+        std::vector<Canal *> getCanais();
+        void setCanais(std::vector <Canal*> canais);
 
+        std::vector<int> getParticipantesIDs();
+        void addParticipanteID(int participanteID);
+
+        void addCanal(Canal *canal);
 
 };
+
+#endif

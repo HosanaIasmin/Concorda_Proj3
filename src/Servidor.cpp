@@ -1,50 +1,72 @@
 #include "Servidor.h"
-#include "Canal.h"
-#include <iostream>
-#include <string>
+// #include "Canal.h"
+// #include <iostream>
+// #include <string>
 #include <random>
-#include <vector>
+// #include <vector>
 
 using namespace std;
 
-Servidor::Servidor(int usarioDonoId, string nome, string descricao){
-    this->usuarioDonoId = usuarioDonoId;
+Servidor::Servidor(int usuarioDonoID, string nome, string descricao) {
+    this->usuarioDonoID = usuarioDonoID;
     this->nome = nome;
     this->descricao = descricao;
     this->codigoConvite = gerarCodigoConvite();
 }
 
-int Servidor::getUsuarioDonoId(){
-    return usuarioDonoId;
-}
-string Servidor::getNome(){
-    return nome;
-}
-string Servidor::getCodigoConvite(){
-    return codigoConvite;
-}
-std::vector<Canal *> Servidor::getCanais(){
-    return canais;
-}
-std::vector<int> Servidor::getParticipantesIDs(){
-    return participantesIDs;
+Servidor::~Servidor() {
+    this->canais.clear();
 }
 
-int Servidor::setUsuarioDonoId(int dono){
-    usuarioDonoId = dono;
+
+int Servidor::getUsuarioDonoID() {
+    return this->usuarioDonoID;
 }
-string Servidor::setNome(string nome){
-    nome = nome;
+void Servidor::setUsuarioDonoID(int usuarioDonoID) {
+    this->usuarioDonoID = usuarioDonoID;
 }
-string Servidor::gerarNovoCodigoConvite(){
+
+string Servidor::getNome() {
+    return this->nome;
+}
+void Servidor::setNome(string nome) {
+    this->nome = nome;
+}
+
+string Servidor::getDescricao() {
+    return this->descricao;
+}
+void Servidor::setDescricao(string descricao) {
+    this->descricao = descricao;
+}
+
+string Servidor::getCodigoConvite() {
+    return this->codigoConvite;
+}
+string Servidor::gerarNovoCodigoConvite() {
     codigoConvite = gerarCodigoConvite();
+    return codigoConvite;
 }
-void Servidor::addCanal(const Canal &canal){
-    canais.push_back(canal);
+
+std::vector<Canal *> Servidor::getCanais() {
+    return this->canais;
 }
-void Servidor::addParticipante(int participanteId){
-    participantesIDs.push_back(participanteId);
+void Servidor::setCanais(std::vector <Canal *> canais) {
+    this->canais = canais;
 }
+
+std::vector<int> Servidor::getParticipantesIDs() {
+    return participantesIDs;
+}
+void Servidor::addParticipanteID(int participanteID) {
+    this->participantesIDs.push_back(participanteID);
+}
+
+void Servidor::addCanal(Canal *canal) {
+    this->canais.push_back(canal);
+}
+
+
 
 
 std::string gerarCodigoConvite() {
@@ -59,3 +81,4 @@ std::string gerarCodigoConvite() {
 
     return codigoConvite;
 }
+

@@ -17,35 +17,35 @@ Usuario::~Usuario()
 {
 }
 
-    int Usuario::getID() {
-        return id;
-    }
+int Usuario::getID() {
+    return id;
+}
 
-    std::string Usuario::getNome()  {
-        return nome;
-    }
+std::string Usuario::getNome()  {
+    return nome;
+}
 
-    std::string Usuario::getEmail() {
-        return email;
-    }
+std::string Usuario::getEmail() {
+    return email;
+}
 
-    std::string Usuario::getSenha() {
-        return senha;
-    }
+std::string Usuario::getSenha() {
+    return senha;
+}
 
-    // Setter methods
-    void Usuario::setID(int id) {
-        id = id;
-    }
 
-    void Usuario::setNome( string nome) {
-        nome = nome;
-    }
+void Usuario::setID(int id) {
+    id = id;
+}
 
-    void Usuario::setEmail(string email) {
-        email = email;
-    }
+void Usuario::setNome( string nome) {
+    nome = nome;
+}
 
-    void Usuario::setSenha(string senha) {
-        senha = senha;
-    }
+void Usuario::setEmail(string email) {
+    email = email;
+}
+
+void Usuario::setSenha(string senha) {
+    senha = senha;
+}

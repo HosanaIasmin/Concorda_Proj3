@@ -22,7 +22,7 @@ public:
     Usuario(int id, string nome, string email, string senha);
     Usuario();
 
-    //Destutor da classe
+    // Destutor da classe
     ~Usuario();
 
     
@@ -32,7 +32,6 @@ public:
     string getNome();
     void setNome(string nome);
 
- 
     string getEmail();
     void setEmail(string email);
 

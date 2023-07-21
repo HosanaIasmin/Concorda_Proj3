@@ -4,6 +4,11 @@
 
 using namespace std;
 
+Canal::Canal()
+{
+
+}
+
 Canal::Canal(string nome)
 {
 
@@ -16,14 +21,16 @@ Canal::~Canal()
 
 string Canal::getNome()
 {
-    return nome;
+    return this->nome;
 }
 
 void Canal::setNome(string nome)
 {
-    nome = nome;
+    this->nome = nome;
 }
 
+
+/*
 Mensagem::Mensagem(string dataHora, int enviadaPor, string conteudo)
 {
     this->dataHora = dataHora;
@@ -60,4 +67,4 @@ void Mensagem::setConteudo(string conteudo)
 {
     conteudo = conteudo;
 }
-
+*/
