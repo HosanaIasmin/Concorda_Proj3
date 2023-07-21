@@ -9,6 +9,11 @@ Sistema::Sistema(){
     this->idUsuarioLogado = 0;
 }
 
+Sistema::Sistema(int idUsuarioLogado) {
+    this->idUsuarioLogado = idUsuarioLogado;
+}
+
+
 
 Sistema::~Sistema(){
 

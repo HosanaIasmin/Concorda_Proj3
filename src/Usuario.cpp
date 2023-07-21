@@ -4,8 +4,8 @@
 
 using namespace std;
 
- Usuario::Usuario(int id,string nome,string email, string senha) {
-        this->id = id;
+ Usuario::Usuario(string nome,string email, string senha) {
+        
         this->nome = nome;
         this->email = email;
         this->senha = senha;
